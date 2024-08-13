@@ -1,0 +1,88 @@
+<html>
+<head>
+ 
+  <title>Library Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #catalogSearch {
+      margin-bottom: 20px;
+    }
+
+    #libraryCatalog {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    #libraryCatalog th, #libraryCatalog td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    #libraryCatalog th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to the Library</h1>
+
+  <div>
+    <label for="catalogSearch">Search Catalog: </label>
+    <input type="text" id="catalogSearch" placeholder="Enter keywords...">
+    <button onclick="searchCatalog()">Search</button>
+  </div>
+
+  <table id="libraryCatalog">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Available Copies</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>The Catcher in the Rye</td>
+        <td>J.D. Salinger</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>To Kill a Mockingbird</td>
+        <td>Harper Lee</td>
+        <td>8</td>
+      </tr>
+  
+    </tbody>
+  </table>
+
+  <script>
+    function searchCatalog() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("catalogSearch");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("libraryCatalog");
+      tr = table.getElementsByTagName("tr");
+
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0]; // Change the index to match the column you want to search
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

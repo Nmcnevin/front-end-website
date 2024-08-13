@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    
+    <title>Learn Together Public School Alumni</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Learn Together Public School Alumni</h1>
+    </header>
+
+    <section>
+        <h2>Upcoming Alumni Events</h2>
+        <p>Stay tuned for information on upcoming events.</p>
+
+        <h2>Alumni Gallery</h2>
+        <div class="gallery">
+            <img src="https://i.pinimg.com/564x/a2/86/31/a286318fca6134cf467fff6838770996.jpg" alt="Alumni 1">
+            
+        </div>
+
+        <h2>Share Your Success Story</h2>
+        <form id="alumniForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="story">Your Success Story:</label>
+            <textarea id="story" name="story" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</body>
+</html>

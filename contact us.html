@@ -1,0 +1,44 @@
+<html >
+<head>
+   
+    <title>Contact Us</title>
+    \
+    <style>
+ #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+
+
+    <form action="process_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>School Address:</h2>
+    <p>Marian College Kuttikkanam (Autonomous)
+Peermade, Kuttikkanam, Kerala 685531</p>
+
+    <h2>Phone Number:</h2>
+    <p>04869232654</p>
+
+    
+    <h2>Location:</h2>
+    <div id="map"></div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.137874605935!2d76.96905737507265!3d9.58338179050179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b064dc8bda5cb29%3A0x3d161914b6967f9!2sMarian%20College%20Kuttikkanam%20(Autonomous)!5e0!3m2!1sen!2sin!4v1704469828539!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+   
+</body>
+</html>
